@@ -56,6 +56,3 @@ file = script_path + '/FB_Feed.csv'
 frame.to_csv(path_or_buf=file,index=False)
 
 s3.meta.client.upload_file(file, bucket, 'FB_Feed.csv',ExtraArgs={'ACL': 'public-read'})
-
-#instanceid = nstanceid = urllib.request.urlopen('http://169.254.169.254/latest/meta-data/instance-id').read().decode()
-#ec2.instances.filter(InstanceIds=[instanceid]).stop()
